@@ -343,7 +343,6 @@ elif selected_page == "Age distribution":
 		fig, ax = plt.subplots(figsize=(10, 6))
 		ax.hist(filtered_data['age_shooter1'].dropna(), bins=20, edgecolor='k')
 		ax.set_xlabel("Age")
-        plt.yticks(range(0, int(max_y) + 1))
 		ax.set_ylabel("Number of Shooters")
 		ax.set_title(title)
 		st.pyplot(fig)
