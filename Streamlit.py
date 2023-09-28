@@ -268,11 +268,11 @@ elif selected_page == "Deaths vs unemployment":
 		return state_name_to_abbreviation.get(state_name, state_name)
 
 	# Apply the function to the DataFrame
-	state_killed_totals['State'] = state_killed_totals['State'].apply(convert_state_name_to_abbreviation)
+	st.title('Deaths vs unemployment')
+    state_killed_totals['State'] = state_killed_totals['State'].apply(convert_state_name_to_abbreviation)
 
-    st.title('Deaths vs unemployment')
 	# Create the choropleth map
-	fig1 = px.choropleth(state_killed_totals,
+    fig1 = px.choropleth(state_killed_totals,
 						locations="State",
 						color="Total_Killed",
 						color_continuous_scale="viridis",
