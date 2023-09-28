@@ -394,7 +394,7 @@ elif selected_page == "Shooter":
     ax.set_xlabel('Shooting Type')
     ax.set_ylabel('Percentage')
     ax.set_title('Shooting type overview in percentages')
-    plt.xticks(rotation=90)  
+    ax.set_xticklabels(percentages.index, rotation=45, ha='right')
     
     # Voeg de percentages boven de balken toe
     for i, percentage in enumerate(percentages):
@@ -432,7 +432,7 @@ elif selected_page == "Shooter":
     plt.xlabel('Shooting Type')
     plt.ylabel('Number of incidents')
     plt.title(f'Number of incidents per "shooting_type" in {selected_state}')
-
+    plt.xticks(rotation=45) 
 # Toon de plot in Streamlit
     st.pyplot(fig)
 
@@ -462,5 +462,6 @@ elif selected_page == "Shooter":
     plt.xlabel('Combination of shooting_type and shooter_relationship1')
     plt.ylabel('Number of incidents')
     plt.title(f'Numbers of incidents per shooting type & the shooter relation" for {selected_relationship}')
-
+    plt.xticks(rotation=45)
+    plt.legend(loc='center right')
     st.pyplot(fig)
