@@ -270,7 +270,7 @@ elif selected_page == "Deaths vs unemployment":
 	# Apply the function to the DataFrame
 	state_killed_totals['State'] = state_killed_totals['State'].apply(convert_state_name_to_abbreviation)
 
-
+    st.title('Deaths vs unemployment')
 	# Create the choropleth map
 	fig1 = px.choropleth(state_killed_totals,
 						locations="State",
@@ -463,5 +463,5 @@ elif selected_page == "Shooter":
     plt.ylabel('Number of incidents')
     plt.title(f'Numbers of incidents per shooting type & the shooter relation" for {selected_relationship}')
     plt.xticks(rotation=45)
-    plt.legend(loc='center right')
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     st.pyplot(fig)
