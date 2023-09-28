@@ -26,7 +26,7 @@ state_df = pd.read_csv('school-shootings-data.csv')
 
 
 st.sidebar.title("Navigation")
-selected_page = st.sidebar.radio("Select a page:", ["Home", "Base statistics", "Casualties", "Deaths vs homelessness", "Age distribution", "Weapons", "Shooter"])
+selected_page = st.sidebar.radio("Select a page:", ["Home", "Base statistics", "Casualties", "Deaths vs unemployment", "Age distribution", "Weapons", "Shooter"])
 
 # Definieer gegevens voor elke pagina
 if selected_page == "Home":
@@ -203,7 +203,7 @@ elif selected_page == "Casualties":
 	st.plotly_chart(fig2)
 	st.plotly_chart(fig3)
 
-elif selected_page == "Deaths vs homelessness":
+elif selected_page == "Deaths vs unemployment":
 	
 	state_killed_totals = state_df.groupby('state')['killed'].sum().reset_index()
 
@@ -312,7 +312,7 @@ elif selected_page == "Deaths vs homelessness":
 	# Display the choropleth map in Streamlit
 	st.plotly_chart(fig2)
 	
-	st.text('We could not find a connection between homelessness and casualties in school shootings')
+	st.text('We could not find a connection between unemployment and casualties in school shootings')
 
 
 
