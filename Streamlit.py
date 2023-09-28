@@ -10,7 +10,7 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 from scipy.stats import linregress
 import plotly.express as px
 import os
-kaggle_data={"username":"lucassuijdendorp","key":"78c5005bbd73f5855ff5f80bc5a3e26b"}
+kaggle_data={"username":"lucassuijdendorp","key":"fbbe2173764ce79893ee99215d580f15"}
 os.environ['KAGGLE_USERNAME']=kaggle_data["username"]
 os.environ['KAGGLE_KEY']=kaggle_data["key"]
 #Haal data op van Kaggle
