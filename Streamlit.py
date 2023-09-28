@@ -343,6 +343,7 @@ elif selected_page == "Age distribution":
 		fig, ax = plt.subplots(figsize=(10, 6))
 		ax.hist(filtered_data['age_shooter1'].dropna(), bins=20, edgecolor='k')
 		ax.set_xlabel("Age")
+        plt.yticks(range(0, int(max_y) + 1))
 		ax.set_ylabel("Number of Shooters")
 		ax.set_title(title)
 		st.pyplot(fig)
@@ -464,6 +465,7 @@ elif selected_page == "Shooter":
     plt.title(f'Numbers of incidents per shooting type & the shooter relation" for {selected_relationship}')
     plt.xticks(rotation=45)
     plt.gcf().set_size_inches(12, 6)
+    plt.yticks(range(0, int(max_y) + 1))
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     
     st.pyplot(fig)
