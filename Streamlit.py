@@ -462,6 +462,8 @@ elif selected_page == "Shooter":
     plt.xlabel('Combination of shooting_type and shooter_relationship1')
     plt.ylabel('Number of incidents')
     plt.title(f'Numbers of incidents per shooting type & the shooter relation" for {selected_relationship}')
-    ax.set_xticklabels(rotation=45, ha='right')
+    plt.xticks(rotation=45)
+    plt.gcf().set_size_inches(12, 6)
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    
     st.pyplot(fig)
